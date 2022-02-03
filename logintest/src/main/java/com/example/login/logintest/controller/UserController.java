@@ -15,7 +15,6 @@ import java.time.LocalDate;
 @ResponseBody
 public class UserController {
 
-    @Autowired
     private final UserService userService;
 
     @PostMapping("/signup")
