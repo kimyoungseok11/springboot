@@ -6,7 +6,7 @@ public class Member {
     private String name;
     private Grade grade;
 
-    public Member(Long id, String name, Grade grade) { //command + n 생성자 자동 완성
+    public Member(Long id, String name, Grade grade) { //alt + insert 생성자 단축키
         this.id = id;
         this.name = name;
         this.grade = grade;
