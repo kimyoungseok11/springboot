@@ -14,24 +14,8 @@ public class Order {
         this.discountPrice = discountPrice;
     }
 
-    public int calculatePrice() {
+    public int calculatePrice(){
         return itemPrice - discountPrice;
-    }
-
-    public Long getMemberId() {
-        return memberId;
-    }
-
-    public String getItemName() {
-        return itemName;
-    }
-
-    public int getItemPrice() {
-        return itemPrice;
-    }
-
-    public int getDiscountPrice() {
-        return discountPrice;
     }
 
     public void setMemberId(Long memberId) {
@@ -48,6 +32,22 @@ public class Order {
 
     public void setDiscountPrice(int discountPrice) {
         this.discountPrice = discountPrice;
+    }
+
+    public Long getMemberId() {
+        return memberId;
+    }
+
+    public String getItemName() {
+        return itemName;
+    }
+
+    public int getItemPrice() {
+        return itemPrice;
+    }
+
+    public int getDiscountPrice() {
+        return discountPrice;
     }
 
     @Override

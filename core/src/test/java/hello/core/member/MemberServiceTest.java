@@ -8,21 +8,23 @@ import org.junit.jupiter.api.Test;
 public class MemberServiceTest {
 
     MemberService memberService;
+//    MemberService memberService = new MemberServiceImpl();
 
-    @BeforeEach //테스트가 시작되기 전 무조건 실행된다는 어노테이션
-    public void beforeEach(){
+    @BeforeEach
+    public void beforeEach(){ // beforeEach가 있으면 테스트 전에 먼저 실행되고 테스트가 실행됨
         AppConfig appConfig = new AppConfig();
-        memberService = appConfig.memberService();
+        MemberService memberService = appConfig.memberService();
     }
 
     @Test
     void join(){
         //given
-        Member member = new Member(1L,"memberA",Grade.VIP);
+        Member member = new Member(1L, "memberA", Grade.VIP);
 
         //when
         memberService.join(member);
         Member findMember = memberService.findMember(1L);
+
         //then
         Assertions.assertThat(member).isEqualTo(findMember);
     }
